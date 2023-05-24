@@ -1,0 +1,96 @@
+{
+    "routes": [
+        {
+            "serviceUrl": "http://localhost:50051",
+            "upstream": "/ad/ldap",
+            "verb": "post"
+        },
+        {
+            "serviceUrl": "http://localhost:50051",
+            "upstream": "/ad/ldap",
+            "verb": "get",
+            "authNeeded": false,
+            "permissionNeeded": "create_authors"
+        },
+        {
+            "serviceUrl": "http://localhost:50051",
+            "upstream": "/ad/ldap/:id",
+            "verb": "get"
+        },
+        {
+            "serviceUrl": "http://localhost:50051",
+            "upstream": "/ad/ldap/:id",
+            "verb": "put"
+        },
+        {
+            "serviceUrl": "http://localhost:50051",
+            "upstream": "/ad/ldap/:id",
+            "verb": "delete"
+        },
+        {
+            "serviceUrl": "http://localhost:50051",
+            "upstream": "/ad/login",
+            "verb": "post"
+        },
+        {
+            "serviceUrl": "http://localhost:50051",
+            "upstream": "/ad/user",
+            "verb": "get"
+        },
+        {
+            "serviceUrl": "http://localhost:50051",
+            "upstream": "/ad/user/unlock",
+            "verb": "put"
+        },
+        {
+            "serviceUrl": "http://localhost:50051",
+            "upstream": "/ad/group",
+            "verb": "get"
+        },
+        {
+            "serviceUrl": "http://localhost:50051",
+            "upstream": "/ad/group",
+            "verb": "post"
+        },
+        {
+            "serviceUrl": "http://localhost:50051",
+            "upstream": "/ad/group/:id/:sAMAccountName",
+            "verb": "delete"
+        },
+        {
+            "serviceUrl": "http://localhost:50051",
+            "upstream": "/ad/user/:id/:sAMAccountName",
+            "verb": "delete"
+        },
+        {
+            "serviceUrl": "http://localhost:50051",
+            "upstream": "/ad/user",
+            "verb": "post"
+        },
+        {
+            "serviceUrl": "http://localhost:50051",
+            "upstream": "/ad/user/password_change",
+            "verb": "put"
+        },
+        {
+            "serviceUrl": "http://localhost:50051",
+            "upstream": "/ad/user/disable",
+            "verb": "put"
+        },
+        {
+            "serviceUrl": "http://localhost:50051",
+            "upstream": "/ad/user/enable",
+            "verb": "put"
+        },
+        {
+            "serviceUrl": "http://localhost:50051",
+            "upstream": "/ad/user/email",
+            "verb": "put"
+        },
+        {
+            "serviceUrl": "http://localhost:50051",
+            "upstream": "/ad/user/password_reset",
+            "verb": "put"
+        }
+    ]
+}

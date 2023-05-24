@@ -1,0 +1,174 @@
+{
+    "routes": [
+        {
+            "serviceUrl": "http://localhost:50050",
+            "upstream": "/auth/login",
+            "verb": "post"
+        },
+        {
+            "serviceUrl": "http://localhost:50050",
+            "upstream": "/auth/entity",
+            "verb": "post"
+        },
+        {
+            "serviceUrl": "http://localhost:50050",
+            "upstream": "/auth/entities",
+            "verb": "get"
+        },
+        {
+            "serviceUrl": "http://localhost:50050",
+            "upstream": "/auth/entity/:id",
+            "verb": "get"
+        },
+        {
+            "serviceUrl": "http://localhost:50050",
+            "upstream": "/auth/entity/:id",
+            "verb": "put"
+        },
+        {
+            "serviceUrl": "http://localhost:50050",
+            "upstream": "/auth/entity/:id",
+            "verb": "delete"
+        },
+        {
+            "serviceUrl": "http://localhost:50050",
+            "upstream": "/auth/role",
+            "verb": "post"
+        },
+        {
+            "serviceUrl": "http://localhost:50050",
+            "upstream": "/auth/roles",
+            "verb": "get"
+        },
+        {
+            "serviceUrl": "http://localhost:50050",
+            "upstream": "/auth/role/:id",
+            "verb": "get"
+        },
+        {
+            "serviceUrl": "http://localhost:50050",
+            "upstream": "/auth/role/:id",
+            "verb": "put"
+        },
+        {
+            "serviceUrl": "http://localhost:50050",
+            "upstream": "/auth/role/:id",
+            "verb": "delete"
+        },
+        {
+            "serviceUrl": "http://localhost:50050",
+            "upstream": "/auth/permission",
+            "verb": "post"
+        },
+        {
+            "serviceUrl": "http://localhost:50050",
+            "upstream": "/auth/permissions",
+            "verb": "get"
+        },
+        {
+            "serviceUrl": "http://localhost:50050",
+            "upstream": "/auth/permission/:id",
+            "verb": "get"
+        },
+        {
+            "serviceUrl": "http://localhost:50050",
+            "upstream": "/auth/permission/:id",
+            "verb": "put"
+        },
+        {
+            "serviceUrl": "http://localhost:50050",
+            "upstream": "/auth/permission/:id",
+            "verb": "delete"
+        },
+        {
+            "serviceUrl": "http://localhost:50050",
+            "upstream": "/auth/role-permission",
+            "verb": "post"
+        },
+        {
+            "serviceUrl": "http://localhost:50050",
+            "upstream": "/auth/role-permissions",
+            "verb": "get"
+        },
+        {
+            "serviceUrl": "http://localhost:50050",
+            "upstream": "/auth/role-permission/:role_id",
+            "verb": "get"
+        },
+        {
+            "serviceUrl": "http://localhost:50050",
+            "upstream": "/auth/role-permission/:role_id/:permission_id",
+            "verb": "get"
+        },
+        {
+            "serviceUrl": "http://localhost:50050",
+            "upstream": "/auth/role-permission/:role_id/:permission_id",
+            "verb": "delete"
+        },
+        {
+            "serviceUrl": "http://localhost:50050",
+            "upstream": "/auth/user-permission",
+            "verb": "post"
+        },
+        {
+            "serviceUrl": "http://localhost:50050",
+            "upstream": "/auth/user-permissions",
+            "verb": "get"
+        },
+        {
+            "serviceUrl": "http://localhost:50050",
+            "upstream": "/auth/user-permission/:user_id",
+            "verb": "get"
+        },
+        {
+            "serviceUrl": "http://localhost:50050",
+            "upstream": "/auth/user-permission/:user_id/:permission_id",
+            "verb": "get"
+        },
+        {
+            "serviceUrl": "http://localhost:50050",
+            "upstream": "/auth/user-permission/:user_id/:permission_id",
+            "verb": "delete"
+        },
+        {
+            "serviceUrl": "http://localhost:50050",
+            "upstream": "/auth/user-role",
+            "verb": "post"
+        },
+        {
+            "serviceUrl": "http://localhost:50050",
+            "upstream": "/auth/user-roles",
+            "verb": "get"
+        },
+        {
+            "serviceUrl": "http://localhost:50050",
+            "upstream": "/auth/user-role/:user_id",
+            "verb": "get"
+        },
+        {
+            "serviceUrl": "http://localhost:50050",
+            "upstream": "/auth/user-role/:user_id/:role_id",
+            "verb": "get"
+        },
+        {
+            "serviceUrl": "http://localhost:50050",
+            "upstream": "/auth/user-role/:user_id/:role_id",
+            "verb": "delete"
+        },
+        {
+            "serviceUrl": "http://localhost:50050",
+            "upstream": "/auth/user-entity",
+            "verb": "post"
+        },
+        {
+            "serviceUrl": "http://localhost:50050",
+            "upstream": "/auth/user-entitiy/:user_id/:entity_id",
+            "verb": "get"
+        },
+        {
+            "serviceUrl": "http://localhost:50050",
+            "upstream": "/auth/user-entitiy/:user_id/:entity_id",
+            "verb": "delete"
+        }
+    ]
+}
