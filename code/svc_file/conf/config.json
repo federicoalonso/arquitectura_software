@@ -1,0 +1,35 @@
+{
+  "app": "svc_file",
+  "locale": "ES",
+  "domain": "http://localhost",
+  "environment": "development",
+  "dbConnectionString": "mysql://root:secret@localhost:3306/svc_admin",
+  "errorFile": "logs/error.log",
+  "combineFile": "logs/combined.log",
+  "authUrl": "http://localhost:4000/svc_auth/users/validateToken",
+  "customPaymentURL": "http://localhost:5011/custom_payment/payment",
+  "logQueue": "logQueue",
+  "webServer": {
+    "port": 4003,
+    "baseUrl": "/svc_file",
+    "routes": {
+      "uploadFiles": "/:event_id/files",
+      "viewVideo": "/video/:videoName",
+      "viewImage": "/image/:imageName"
+    }
+  },
+  "cors": {
+    "development": {
+      "corsOptions": {
+        "origin": "*",
+        "methods": ["GET", "POST"]
+      }
+    },
+    "production": {
+      "corsOptions": {
+        "origin": ["https://example.com", "http://example.com"],
+        "methods": ["GET", "POST"]
+      }
+    }
+  }
+}

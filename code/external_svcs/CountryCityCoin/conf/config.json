@@ -1,0 +1,31 @@
+{
+  "app": "countryCityCoin",
+  "locale": "ES",
+  "environment": "development",
+  "errorFile": "logs/CountryCityCoin.log",
+  "combineFile": "logs/combined.log",
+  "webServer": {
+    "port": 6010,
+    "baseUrl": "/countryCityCoin",
+    "routes": {
+      "healthCheck": "/healthCheck",
+      "countryCityCoin": {
+        "countryCityCoin": "/CityCoin"
+      }
+    }
+  },
+  "cors": {
+    "development": {
+      "corsOptions": {
+        "origin": "*",
+        "methods": ["GET"]
+      }
+    },
+    "production": {
+      "corsOptions": {
+        "origin": ["https://example.com", "http://example.com"],
+        "methods": ["GET"]
+      }
+    }
+  }
+}

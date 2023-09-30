@@ -1,0 +1,38 @@
+{
+  "app": "svc_log",
+  "locale": "ES",
+  "environment": "development",
+  "dbConnectionString": "mongodb://root:example@localhost:27017/svc_log?authSource=admin",
+  "errorFile": "logs/Error.log",
+  "combineFile": "logs/combined.log",
+  "redisHost": "localhost",
+  "redisPort": 6379,
+  "logQueue": "logQueue",
+  "webServer": {
+    "port": 4012,
+    "baseUrl": "/svc_log",
+    "routes": {
+      "healthCheck": "/healthCheck",
+      "log": {
+        "logQueue": "/log",
+        "getURLStatistics": "/getURLStatistics",
+        "getEmailStatistics": "/getEmailStatistics",
+        "getAuditLogs": "/getAuditLogs"
+      }
+    }
+  },
+  "cors": {
+    "development": {
+      "corsOptions": {
+        "origin": "*",
+        "methods": ["POST, GET"]
+      }
+    },
+    "production": {
+      "corsOptions": {
+        "origin": ["https://example.com", "http://example.com"],
+        "methods": ["POST, GET"]
+      }
+    }
+  }
+}

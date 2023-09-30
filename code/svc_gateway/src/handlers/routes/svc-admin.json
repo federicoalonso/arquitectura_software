@@ -1,0 +1,12 @@
+{
+    "routes": [
+        {
+            "description": "Crear un nuevo proveedor",
+            "serviceUrl": "http://localhost:4001",
+            "upstream": "/svc_admin/providers",
+            "verb": "post",
+            "authNeeded": true,
+            "permissionsNeeded": ["admin"]
+        }
+    ]
+}

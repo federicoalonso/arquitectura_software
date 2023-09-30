@@ -1,0 +1,17 @@
+{
+  "name": "svc-mail",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bull": "^4.10.4",
+    "nodemailer": "^6.9.3",
+    "redis": "^4.6.6",
+    "winston": "^3.9.0"
+  }
+}

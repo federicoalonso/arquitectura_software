@@ -1,0 +1,28 @@
+{
+  "name": "svc_payment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "country-currency-map": "^2.1.7",
+    "config": "^3.3.8",
+    "cors": "^2.8.5",
+    "countries": "^1.0.2",
+    "countries-list": "^2.6.1",
+    "country-state-city": "^3.1.4",
+    "countryjs": "^1.8.0",
+    "currency-codes": "^2.1.0",
+    "currency-symbol-map": "^5.1.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "sequelize": "^6.32.0",
+    "winston": "^3.9.0"
+  }
+}

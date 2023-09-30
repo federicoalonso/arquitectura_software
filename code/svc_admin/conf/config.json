@@ -1,0 +1,34 @@
+{
+  "app": "svc_admin",
+  "locale": "ES",
+  "environment": "development",
+  "dbConnectionString": "mysql://root:secret@localhost:3306/svc_admin",
+  "errorFile": "logs/ProviderError.log",
+  "combineFile": "logs/combined.log",
+  "svcAuthURL": "http://localhost:4000/svc_auth/",
+  "logQueue": "logQueue",
+  "webServer": {
+    "port": 4001,
+    "baseUrl": "/svc_admin",
+    "routes": {
+      "healthCheck": "/healthCheck",
+      "providers": {
+        "createProvider": "/providers"
+      }
+    }
+  },
+  "cors": {
+    "development": {
+      "corsOptions": {
+        "origin": "*",
+        "methods": ["POST"]
+      }
+    },
+    "production": {
+      "corsOptions": {
+        "origin": ["https://example.com", "http://example.com"],
+        "methods": ["POST"]
+      }
+    }
+  }
+}

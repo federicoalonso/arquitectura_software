@@ -1,0 +1,13 @@
+{
+  "roles": [
+    {
+      "name": "admin"
+    },
+    {
+      "name": "user"
+    },
+    {
+      "name": "proveedor"
+    }
+  ]
+}

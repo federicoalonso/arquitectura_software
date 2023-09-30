@@ -1,0 +1,12 @@
+{
+    "routes": [
+        {
+            "description": "Se pueden ver los logs de audit",
+            "serviceUrl": "http://localhost:4012",
+            "upstream": "/getAuditLogs",
+            "verb": "get",
+            "authNeeded": true,
+            "permissionsNeeded": ["admin"]
+        }
+    ]
+}

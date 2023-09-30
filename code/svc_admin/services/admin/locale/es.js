@@ -1,0 +1,48 @@
+const crudMessages = {
+  //notFound: "No existe el usuario",
+  alreadyExist: "Ya existe el proveedor",
+  //elementDeleted: "Usuario eliminado",
+  roleIdIsMissing: "El rol es obligatorio",
+  authMethodIsMissing: "El método de autenticación es obligatorio",
+  tokenExpired: "El token ha expirado",
+  tokenValidationError: "El token no es válido",
+  providerIsMissing: "Debe enviar datos para el proveedor",
+  invalidEmailFormat: "Formato de email inválido",
+  invalidNumberFormat: "Formato de número inválido",
+  nameIsMissing: "El nombre es obligatorio",
+  countryIsInvalid: "El país es inválido",
+  cityIsInvalid: "La ciudad es inválida",
+  currencyIsInvalid: "La moneda es inválida",
+  currencySymbolIsInvalid: "El símbolo de la moneda es inválido",
+  currencyCodeIsInvalid: "El código de la moneda es inválido",
+  emailIsMissing: "El email es inválido",
+  // Niveles de logs
+  levelInfo: "Info",
+  levelError: "Error",
+  // Service name
+  serviceName: "svc_admin",
+  // Mensajes de logs
+  messageLogPostRequest: "Petición del tipo POST recibida",
+  messageLogPostResponse: "Respuesta a petición del tipo POST",
+  messageInitializingRoutes: "Inicializando rutas de la aplicación",
+  messageInitializedRoutes: "Rutas de la aplicación inicializadas",
+  applicationInitialized: "Aplicación inicializada",
+  errorPostRequest: "Error al procesar la petición POST",
+  checkingLogicHealth: "Verificando salud de la lógica",
+  logicHealtChecked: "Salud de la lógica verificada",
+  logicHealthError: "Error al verificar la salud de la lógica",
+  providerModelInitialized: "Modelo de datos del los proveedores inicializado",
+  initializingModels: "Inicializando los modelos de datos",
+  modelsInitialized: "Modelo de datos inicializado",
+  modelsToServicesSync: "Modelo de datos y servicios sincronizados",
+  errorWhileInitializingModels: "Error al inicializar los modelos",
+  saveProviderCall: "Invocación a la función saveProvider",
+  providerCreated: "Proveedor creado con éxito",
+  createProviderCall: "Invocación a la función createProvider",
+  providerValidated: "Proveedor validado con éxito",
+  providerCreationError: "Error al crear proveedor",
+};
+
+module.exports = {
+  crudMessages,
+};

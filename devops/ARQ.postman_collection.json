@@ -1,0 +1,1143 @@
+{
+	"info": {
+		"_postman_id": "3bb9758d-53da-44ba-aa43-497fa3f27d1b",
+		"name": "ARQ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8242832",
+		"_collection_link": "https://winter-star-441617.postman.co/workspace/AR~4e653200-0fd7-419d-afae-35370995d832/collection/8242832-3bb9758d-53da-44ba-aa43-497fa3f27d1b?action=share&creator=8242832&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Gateway",
+			"item": [
+				{
+					"name": "svc_admin",
+					"item": [
+						{
+							"name": "Crear Proveedor",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGV4YW1wbGUuY29tIiwiaWF0IjoxNjg3MzA0OTUyLCJleHAiOjE2ODczMDg1NTJ9.t8a9hUH1CG0BTEQL59X1Ip2n_AET0mMY-pr0D2y2iVT-4pL5Gr9NuNR5cMTqRR2QjPxTJK61ofxjtC9sMAVUyZ12fX2N81dLqrh9kiqB2QELfx8DuUcpp_2f2clb62k0SuK9OVYFh10B0TiRsayVjyC0r8ZuhUpzUrFK4v5aauYOJJSsQ_3SPz4TvhUh2VNTUoqmEnXXb3XB7SZmFBiEDq3wxyJnU-qYLHMmLmPqIR8CBjPinGVjVmqxtqr1h3lOPbX2KNMoZ6lTY1bcS42hUEDno5ZRgXqYvkHgDqBDkVkn5XdPgM0bo7RwX0WYe7YTFOSlLhZCoOilDMds8IeNNA",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Sarah Johnson\",\n    \"country\": \"Uruguay\",\n    \"city\":\"Montevideo\",\n    \"email\": \"sarah.johnson@example.com\",\n    \"price\": \"300\",\n    \"telephone\": \"\",\n    \"currency\": \"Peso Uruguayo\",\n    \"currencySymbol\": \"$U\",\n    \"currencyCode\": \"UYU\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5100/svc_admin/providers",
+									"host": [
+										"localhost"
+									],
+									"port": "5100",
+									"path": [
+										"svc_admin",
+										"providers"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "svc_evento",
+					"item": [
+						{
+							"name": "Crear Evento",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhcmFoLmpvaG5zb25AZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczMDY0ODQsImV4cCI6MTY4NzMxMDA4NH0.fsEKvBbbTKV1ZMhzD7bioigMrmrqrzGHGsdVw8FLeLW3u6GqrEQ7ogxNAyrVN441qX4S57qBXiZdiH1-swg1erzI7tGcrJyao8ivpFq2n4EK5JzCTJKT0UzJvK2QTcLfaGubc2IVTBCzMt-QIeP0XruTCk_Onm9kwtsXJuGJBnam7cECsWoCFLefgk56BCAhqPTao5PpLL4jFTnRMLD4pe3WeOhfyKEopcGtIfz87dgfDiOwD3xQ77yzADilZUQZmuiJBGhLdu5olPozTgjuqijqORH4hsWZfCFq__yTrfUoS5eNbWo2aWQqg5wh1mvXKM4QNmklHGskftxLcFV6Bw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nombre\": \"El evento distinto 3\",\n    \"descripcion\": \"Descripción del evento\",\n    \"f_inicio\": \"06-21-2023\",\n    \"f_fin\": \"12-12-2023\",\n    \"categoria\": \"educacion\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5100/svc_evento/evento",
+									"host": [
+										"localhost"
+									],
+									"port": "5100",
+									"path": [
+										"svc_evento",
+										"evento"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Actualizar Evento",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmUuc21pdGhAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODcxMjA4NDEsImV4cCI6MTY4NzEyNDQ0MX0.jmadNgswSEMpbRv_1DIj0FtD-qR5eEvKEvjDFhJy7iLPH7qXgWJHQEkv6x2vRWdSjFD4xat9Dq3D5k9NnZ5ErwJJmytgmY-J6Lx2vkMo9em3VO0Evr4hsuQAhPUqS2zvAt8YxaIjAStK43DFN5Ob7Kzq82qnvrAgsYk_3FV8pF5HNi7LBDNMYcr3OxavWvktnSGnlBxO13_qn5460Lc9R71yHmLHtw2iHxtIZfSAQyzM57PIRArfm_n0dahcVzilAglajrDy5Gsaym16e-LZRxj8y9gESLn2joeRkjuiaI0Yt5X7PTLBzjpJV0VeKrwfsR8KoI9VYMX_ddE4WaS0yQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nombre\": \"Primer Evento Actualizado\",\n    \"descripcion\": \"Descripción del evento Dos\",\n    \"f_inicio\": \"09-09-2023\",\n    \"f_fin\": \"12-12-2023\",\n    \"categoria\": \"educacion\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5100/svc_evento/evento/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5100",
+									"path": [
+										"svc_evento",
+										"evento",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Autorizar Evento",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGV4YW1wbGUuY29tIiwiaWF0IjoxNjg3MzA0OTUyLCJleHAiOjE2ODczMDg1NTJ9.t8a9hUH1CG0BTEQL59X1Ip2n_AET0mMY-pr0D2y2iVT-4pL5Gr9NuNR5cMTqRR2QjPxTJK61ofxjtC9sMAVUyZ12fX2N81dLqrh9kiqB2QELfx8DuUcpp_2f2clb62k0SuK9OVYFh10B0TiRsayVjyC0r8ZuhUpzUrFK4v5aauYOJJSsQ_3SPz4TvhUh2VNTUoqmEnXXb3XB7SZmFBiEDq3wxyJnU-qYLHMmLmPqIR8CBjPinGVjVmqxtqr1h3lOPbX2KNMoZ6lTY1bcS42hUEDno5ZRgXqYvkHgDqBDkVkn5XdPgM0bo7RwX0WYe7YTFOSlLhZCoOilDMds8IeNNA",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"event_name\": \"El evento distinto\",\n    \"provider_name\": \"Sarah Johnson\",\n    \"auth_type\": \"manual\",\n    \"auth_status\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5100/svc_evento/evento/11/auth",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5100",
+									"path": [
+										"svc_evento",
+										"evento",
+										"11",
+										"auth"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obtener Eventos Disponibles",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5100/svc_evento/evento",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5100",
+									"path": [
+										"svc_evento",
+										"evento"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Registrarse como cliente",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"michael.brown@example.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5100/svc_evento/cliente",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5100",
+									"path": [
+										"svc_evento",
+										"cliente"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Suscribirse a un evento",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9saXZlci5tYXJ0aW5AZXhhbXBsZS5jb20iLCJpYXQiOjE2ODcyMDc3MDQsImV4cCI6MTY4NzIxMTMwNH0.OP6NforDk95IcZMzDnWdr1fpaz00DyF4gfbxuyQBbLUdHBgzXa7qZBtznfBAavbqsqI3Z3KRmlAZ084-IDieBMZ7UceOwMTJD9UTNywZaeZr1NAiD86oD9mX3ykvOoQAm1WDD84o7tn5mX9-3kadre1-e2IuN6vU_rKxz6NmxCkPRgsi1ZZvCvndule8aU0uzSk7XjcjsxECK19nr796R8WWr9WNP1-9eiz5XPywq7jq3ROe5TRTba8Xki7q3LG2oeuTEfwcRbphjrkwZLplWuV_zyWmuH5SoiFZdPMjCH2m-lVlR8SnlA1yFnqAVXgvcNEtIEx3yh0UhITrRU1YBw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:5100/svc_evento/evento/5/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5100",
+									"path": [
+										"svc_evento",
+										"evento",
+										"5",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Enviar Mensaje",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmUuc21pdGhAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODcxOTMyMDAsImV4cCI6MTY4NzE5NjgwMH0.3hnJHMYK2vPZduF40Prsb1vkaQrghhbEOWtzvjgJoqaT81Cyk4JUQcriZXmwGBepushtfyUvpYRIfr6mKHIAhcJG4D3Et861TyULjbS2UxgVE0ePv82lhZqMeR29hxxgqynVCkyXjxOHjgKLDLuxVVp3kQjuBXge3-Us5CRqbOzJfUvungMev_1xUi6xhmGljuD7cZi3Qp9kyZGd-WN4GFAW0PGwGR3KaVrkgErCtA1H5JbA_VsAVYhN265JH04vvtTqWtZKb79NUxB39RpX9soSmnmsWYqHxsYCirS8nts_HlkMyu7VnFUiPh9FoCEojdUWtCXc2NFDRhobsNOLEw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"evento_id\": 1,\n    \"mensaje\": \"Mensaje para todos los suscriptos a este evento\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5100/svc_evento/mensaje",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5100",
+									"path": [
+										"svc_evento",
+										"mensaje"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Compra Evento",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9saXZlci5tYXJ0aW5AZXhhbXBsZS5jb20iLCJpYXQiOjE2ODcyOTcwODMsImV4cCI6MTY4NzMwMDY4M30.dylkHoQxaekDFMOSgJNaY2E-xVWR91-aQlyUidbz5m2e9vVc2MPuB9E7grn_IZfHsY9-HSWphv5orhTIoPX0gFg-aLVS23hcreoGQLuOQxVeDf_O1xQ7hypmh3TgWtS3hXxBnpmD6wqTW-4Dc5I949SzPe31ZeQFc-vmWoiOP6m6f6CO_AJ891lMYnHlzx-cvWg2gtcbZ2yXNRBEux_ZcAhBxXXKVDYxnqhVD7GOHey4lS72Uy_ZsPRryxHE1ZHDEdttTFT5aHlQst2UGPG2np187Fr8Q7xFayDG290-bJKi7gBCj2fT8NhcIgqvNSLD5YahP1kp8rWaT05zOZBlVA",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nombre_completo\": \"Nombre de Usuario\",\n    \"f_nacimiento\": \"04-17-1988\",\n    \"pais\": \"Uruguay\",\n    \"payment_method\": \"CustomPaymentService\",\n    \"evento_id\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5100/svc_evento/compra/1/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5100",
+									"path": [
+										"svc_evento",
+										"compra",
+										"1",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Acceder a Evento",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9saXZlci5tYXJ0aW5AZXhhbXBsZS5jb20iLCJpYXQiOjE2ODcxNzcwMDEsImV4cCI6MTY4NzE4MDYwMX0.gb1DdlopMbc7W9XxIz-7LtzMyc2xVkawLIkM6_r3ixhvrDP9HRBHtEx5VqGGHUvvqWIOe8MqrtPrIS3kUYRe6jyxiOlip5gUIgDZGPx7erI0cICbZOlEgFHTjK32hR792THJc71tU5BA3AVO2RTRVkSvgIemir3ga9C_ZJUGOpYNbsod2MeNF-45lU_Dq743HwqfgQT62n6uex-RtK_MwIVxj9P6Lrb-Zi6q7hloj4tGHf3Is9WhM8oKuaTw2nHty0uY3Un2e_p1TvWzfLceQK2iwk7MTxBQC2w0lK3vM35lIwc9rJh4A5TsX96ax_8GyadfbJLKLpepVl4juPQc1g",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:5100/svc_evento/evento/8008c80d-6b44-4364-8dcf-e59e3e33ec64",
+									"host": [
+										"localhost"
+									],
+									"port": "5100",
+									"path": [
+										"svc_evento",
+										"evento",
+										"8008c80d-6b44-4364-8dcf-e59e3e33ec64"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eventos para proveedores",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmUuc21pdGhAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczMDA3NDAsImV4cCI6MTY4NzMwNDM0MH0.AOU7qG7u5Ysi2v7iMHidSrgA0D7K-GAPvWPq9OCWqP42bjNYFvc_nY8415QVH3y5NAM-HTsjyxk-F1uJCdVDNyc2Bvb0KayTxCIruU2leUQozKWI7vjPpxtk3uZkMWL2jzzk6lWF2GPdgQEMpr0EJcQEiLlFxysiHjBbFjUroBptKMFhAr-PUf74mLq35QBX2BG9Q53cwDV_73YAmWyQGoFjkWyqfzsyp4ZD8Tkdl2AuHbxxmCN9ahkYL0NE4h_7KJjQ31Wu6o_2cUnSA2mg_p7j1qv28kOrwSh0V-FL3GzyZtJiJYhAI-PgmnHKlRzDgty-h8WUB-3SfPT2pZB6gQ",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:5100/svc_evento/evento/1/proveedor",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5100",
+									"path": [
+										"svc_evento",
+										"evento",
+										"1",
+										"proveedor"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eventos para administradores",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmUuc21pdGhAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODcyMTUzNjcsImV4cCI6MTY4NzIxODk2N30.BolczLfZiyvAfEnYv0-iOezh7nQIG5G8G4GO8KrPLnKSao0dDRpfIf0yIvGvv8n2iRhvuFOsiq-huRGtdRsId4Fte35gF8GLmub2q_bqgV3bjec9NE4wq9tp0Xl4nIbdOmLE6PiBKptwhwLiHgHCrVhmMKgdgW1Q-75zHdM11kQeK7ZteuN7_v3XfrDm0F84qF_P9FmSV3jiMx7vE7E6m0F71dTvIOPzlSuw6A14tZndZJk8NgknZAvar7N13YROdl4rbukZe4sHDY7MmsGdLtWkN3f8bZeg_WykWn1tY0Sl_GhKwh24_d26rt67tFSkF85SFmVkOtZMyvWtIO7FSw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:5100/svc_evento/evento_admin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5100",
+									"path": [
+										"svc_evento",
+										"evento_admin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eventos para administradores Bitacora",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGV4YW1wbGUuY29tIiwiaWF0IjoxNjg3MzAwODQ4LCJleHAiOjE2ODczMDQ0NDh9.GuLatBEacS6JzuiSl3EyP_9TaK7Mtxp8g2ODqZeloGl2ZlHtE_q5ouT-7QxoWqqY-bk6JuDd5CIE4iHXP1KzdUodYwVituN9pKtpaxgIVyLhDqSDnO0FM4T36KXgtar34yIJuro3CRgejxL_73GkuHqFIgg2YRAtoHCua85RdbcJRy3APIvua4XZQ07_CTlHT1XHPS3PPMOkxMniKJhbbQ1B5Mxmebe2_XClutnLlZ8PiCE__7wLIfZzIe94QS5ZEy2EfuY-v30-RShLsLKhla7wBjAuh_n4-bXo31aBb0ua2-0BVubaW15R1ParIdlf94qWCgQEvxvCXHIgueieNw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:5100/svc_evento/evento_admin_bitacora?from=1-1-2020&until=12-12-2024",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5100",
+									"path": [
+										"svc_evento",
+										"evento_admin_bitacora"
+									],
+									"query": [
+										{
+											"key": "from",
+											"value": "1-1-2020"
+										},
+										{
+											"key": "until",
+											"value": "12-12-2024"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Evento para proveedor",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmUuc21pdGhAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODcyOTg4MTgsImV4cCI6MTY4NzMwMjQxOH0.pEZbZGR9f2mFWiNjxCHlJ2peVYpuGftdZ2KA3pYRs5Y-8DVqsI8rDIFd-q54GF-Jg5jRCAR_ylFY_5tFQL4qelW-YVmxV--ejH0eBmlYHqIQQUtw4DK_afcy4qNzuaS7nv5KWI7ZKHsLxbZUyZoYwO-c5QJdNeGFVFEbbuTip7luo1oRz84dyYZS6p_WJYbgMGx4kNfUA6JzPC8V6_eMSwOEZcdUlrCbmS0FWnFhGMlSyJHB-Da0w24ZgI7c3vgIwoY3RLVBBFgPqYVtQ8tHDhPzkftJPE3W79o1M_aHo6tl6M2xu-znYNkRgqKRY-pzzgUABIO9tY8yizxNxhURIQ",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:5100/svc_evento/evento_provider/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5100",
+									"path": [
+										"svc_evento",
+										"evento_provider",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "svc_file",
+					"item": [
+						{
+							"name": "Subir Archivos Evento",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmUuc21pdGhAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODcwNDcxMDYsImV4cCI6MTY4NzA1MDcwNn0.TVPn8kHLaVf5oLfLV81oC2JwjWWkoMyJaIeNne8U8NyAhhJkMtdk1eWEZ6pOUy69Sw0ZTBB3IVfVIGGZ18e5nlzDbDu47tbMh_zeanM7dgyaeDTSZ14Mbuq1P8PIduHBS6WtD5OesdoLNTejyO1d-41dM-1aTt53RYOD2NYAt-oqu8G9KP9Cfken7do9njvs68pMt7g6P75dBz0QfIaVOP4ZTkpO5PfmOqQ0k2oonqiJmDTL5AI7w9-bhD3oL01txb-BiwJ3q1633JdH-2oKwG9Ob-JjPimWK70p88U6Dse7d4wlGAmeXEonQGkpL1oTDkyXH1Ma5C84kNTOq5Y8Zg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "imageMin",
+											"type": "file",
+											"src": "/home/falonso@GXC.local/Pictures/image.png"
+										},
+										{
+											"key": "imagePrin",
+											"type": "file",
+											"src": "/home/falonso@GXC.local/Pictures/correo.jpg"
+										},
+										{
+											"key": "video",
+											"type": "file",
+											"src": "/run/user/594001314/doc/75fd9c2d/video.mp4"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:4003/svc_file/1/files",
+									"host": [
+										"localhost"
+									],
+									"port": "4003",
+									"path": [
+										"svc_file",
+										"1",
+										"files"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Ver Video",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9saXZlci5tYXJ0aW5AZXhhbXBsZS5jb20iLCJpYXQiOjE2ODcyOTcwODMsImV4cCI6MTY4NzMwMDY4M30.dylkHoQxaekDFMOSgJNaY2E-xVWR91-aQlyUidbz5m2e9vVc2MPuB9E7grn_IZfHsY9-HSWphv5orhTIoPX0gFg-aLVS23hcreoGQLuOQxVeDf_O1xQ7hypmh3TgWtS3hXxBnpmD6wqTW-4Dc5I949SzPe31ZeQFc-vmWoiOP6m6f6CO_AJ891lMYnHlzx-cvWg2gtcbZ2yXNRBEux_ZcAhBxXXKVDYxnqhVD7GOHey4lS72Uy_ZsPRryxHE1ZHDEdttTFT5aHlQst2UGPG2np187Fr8Q7xFayDG290-bJKi7gBCj2fT8NhcIgqvNSLD5YahP1kp8rWaT05zOZBlVA",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:4003/svc_file/video/1687047123084-945-video.mp4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4003",
+									"path": [
+										"svc_file",
+										"video",
+										"1687047123084-945-video.mp4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Ver Imagen",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4003/svc_file/image/1687047123083-451-image.png",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4003",
+									"path": [
+										"svc_file",
+										"image",
+										"1687047123083-451-image.png"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "svc_log",
+					"item": [
+						{
+							"name": "Get Audit Logs",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGV4YW1wbGUuY29tIiwiaWF0IjoxNjg3Mjc2ODY4LCJleHAiOjE2ODcyODA0Njh9.Z9ekqZyBIKGysMHBO1cN7K2-prMh7pt9gA6YeTwDuOFIxH5S3LITecf8D1eXXVJWaJjuuo-5fzItsepqNtt-RCOgVwjJCAih4k3gEDc4JcjQFCVJowQQEW_Nq1RCTenPLZFEEkrXCx1-Tpubr2QDk1_LtPA6X4GxnxOz6ZDigVcJI7p2rkEU2cTeAp-8hltdjuO3wG8daWwKjQGhqDl7PXChb6XiYM8jMbhaOjP3q1ueJmtMdR6T0_3q0adg4KvH4b90MbuVkiZ_kdnAEbmCe8NQkzjGAwi2KzwaI5hSmnF5S9j1Uo0LLREn30QsSl9Q8WtGtNefPwTvOO619R3ZfQ",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:5100/getAuditLogs",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5100",
+									"path": [
+										"getAuditLogs"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "svc_auth",
+					"item": [
+						{
+							"name": "Obtener Admins",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGV4YW1wbGUuY29tIiwiaWF0IjoxNjg3MzA4NzE2LCJleHAiOjE2ODczMTIzMTZ9.faUvh7TrtRt3w9uq39S19Z9YFWrsHESMfzf72B7fFGcejVAZtcCLgfLbPyUsNoBTiPiO6fw9nRWU2qH_w-j1skC5PFQXhdkcMI8rJo3RJKMBG2AKZZyiVYp67c-nJ73gdz5hF-BHtbyHVWNUc1tJ9yVtiQF2kPEEDcjznxg_A_DHSmTGV7gY9tP5gOnM3GwFaQ4wIDyR4EBj3RvTH8JVG_3kDymPdPmW63y9ILT_tn_axNQcKkORxlSmNvcz2i5-7_pmPXlHDhxOkiGHP2cppKsTSLmpTtLitd3p6XHLWnWIFTfP8rh1vkF7BvBtXRJ3zaLjyLJ6vb4OV3K41S66sg",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:5100/svc_auth/users/admins",
+									"host": [
+										"localhost"
+									],
+									"port": "5100",
+									"path": [
+										"svc_auth",
+										"users",
+										"admins"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obtener Usuarios",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGV4YW1wbGUuY29tIiwiaWF0IjoxNjg3MzA4NzE2LCJleHAiOjE2ODczMTIzMTZ9.faUvh7TrtRt3w9uq39S19Z9YFWrsHESMfzf72B7fFGcejVAZtcCLgfLbPyUsNoBTiPiO6fw9nRWU2qH_w-j1skC5PFQXhdkcMI8rJo3RJKMBG2AKZZyiVYp67c-nJ73gdz5hF-BHtbyHVWNUc1tJ9yVtiQF2kPEEDcjznxg_A_DHSmTGV7gY9tP5gOnM3GwFaQ4wIDyR4EBj3RvTH8JVG_3kDymPdPmW63y9ILT_tn_axNQcKkORxlSmNvcz2i5-7_pmPXlHDhxOkiGHP2cppKsTSLmpTtLitd3p6XHLWnWIFTfP8rh1vkF7BvBtXRJ3zaLjyLJ6vb4OV3K41S66sg",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:5100/svc_auth/users",
+									"host": [
+										"localhost"
+									],
+									"port": "5100",
+									"path": [
+										"svc_auth",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Crear Usuario",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGV4YW1wbGUuY29tIiwiaWF0IjoxNjg3MzA4NzE2LCJleHAiOjE2ODczMTIzMTZ9.faUvh7TrtRt3w9uq39S19Z9YFWrsHESMfzf72B7fFGcejVAZtcCLgfLbPyUsNoBTiPiO6fw9nRWU2qH_w-j1skC5PFQXhdkcMI8rJo3RJKMBG2AKZZyiVYp67c-nJ73gdz5hF-BHtbyHVWNUc1tJ9yVtiQF2kPEEDcjznxg_A_DHSmTGV7gY9tP5gOnM3GwFaQ4wIDyR4EBj3RvTH8JVG_3kDymPdPmW63y9ILT_tn_axNQcKkORxlSmNvcz2i5-7_pmPXlHDhxOkiGHP2cppKsTSLmpTtLitd3p6XHLWnWIFTfP8rh1vkF7BvBtXRJ3zaLjyLJ6vb4OV3K41S66sg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"robert.williams@example.com\",\n    \"role_id\": 1,\n    \"auth_method\": \"fed_ed\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5100/svc_auth/users",
+									"host": [
+										"localhost"
+									],
+									"port": "5100",
+									"path": [
+										"svc_auth",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Usuario",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGV4YW1wbGUuY29tIiwiaWF0IjoxNjg3MzA4NzE2LCJleHAiOjE2ODczMTIzMTZ9.faUvh7TrtRt3w9uq39S19Z9YFWrsHESMfzf72B7fFGcejVAZtcCLgfLbPyUsNoBTiPiO6fw9nRWU2qH_w-j1skC5PFQXhdkcMI8rJo3RJKMBG2AKZZyiVYp67c-nJ73gdz5hF-BHtbyHVWNUc1tJ9yVtiQF2kPEEDcjznxg_A_DHSmTGV7gY9tP5gOnM3GwFaQ4wIDyR4EBj3RvTH8JVG_3kDymPdPmW63y9ILT_tn_axNQcKkORxlSmNvcz2i5-7_pmPXlHDhxOkiGHP2cppKsTSLmpTtLitd3p6XHLWnWIFTfP8rh1vkF7BvBtXRJ3zaLjyLJ6vb4OV3K41S66sg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"robert.williams@example.com\",\n    \"role_id\": 1,\n    \"auth_method\": \"fed_ed\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5100/svc_auth/users/11",
+									"host": [
+										"localhost"
+									],
+									"port": "5100",
+									"path": [
+										"svc_auth",
+										"users",
+										"11"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Usuario",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGV4YW1wbGUuY29tIiwiaWF0IjoxNjg3MzA4NzE2LCJleHAiOjE2ODczMTIzMTZ9.faUvh7TrtRt3w9uq39S19Z9YFWrsHESMfzf72B7fFGcejVAZtcCLgfLbPyUsNoBTiPiO6fw9nRWU2qH_w-j1skC5PFQXhdkcMI8rJo3RJKMBG2AKZZyiVYp67c-nJ73gdz5hF-BHtbyHVWNUc1tJ9yVtiQF2kPEEDcjznxg_A_DHSmTGV7gY9tP5gOnM3GwFaQ4wIDyR4EBj3RvTH8JVG_3kDymPdPmW63y9ILT_tn_axNQcKkORxlSmNvcz2i5-7_pmPXlHDhxOkiGHP2cppKsTSLmpTtLitd3p6XHLWnWIFTfP8rh1vkF7BvBtXRJ3zaLjyLJ6vb4OV3K41S66sg",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:5100/svc_auth/users/11",
+									"host": [
+										"localhost"
+									],
+									"port": "5100",
+									"path": [
+										"svc_auth",
+										"users",
+										"11"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "svc_bitacora",
+					"item": [
+						{
+							"name": "Obtener Admins Copy",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGV4YW1wbGUuY29tIiwiaWF0IjoxNjg3MzA4NzE2LCJleHAiOjE2ODczMTIzMTZ9.faUvh7TrtRt3w9uq39S19Z9YFWrsHESMfzf72B7fFGcejVAZtcCLgfLbPyUsNoBTiPiO6fw9nRWU2qH_w-j1skC5PFQXhdkcMI8rJo3RJKMBG2AKZZyiVYp67c-nJ73gdz5hF-BHtbyHVWNUc1tJ9yVtiQF2kPEEDcjznxg_A_DHSmTGV7gY9tP5gOnM3GwFaQ4wIDyR4EBj3RvTH8JVG_3kDymPdPmW63y9ILT_tn_axNQcKkORxlSmNvcz2i5-7_pmPXlHDhxOkiGHP2cppKsTSLmpTtLitd3p6XHLWnWIFTfP8rh1vkF7BvBtXRJ3zaLjyLJ6vb4OV3K41S66sg",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:5100/bitacora?from=06-20-2023&until=10-10-2024",
+									"host": [
+										"localhost"
+									],
+									"port": "5100",
+									"path": [
+										"bitacora"
+									],
+									"query": [
+										{
+											"key": "from",
+											"value": "06-20-2023"
+										},
+										{
+											"key": "until",
+											"value": "10-10-2024"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Externos",
+			"item": [
+				{
+					"name": "Login Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"john.doe@example.com\",\n    \"password\": \"P4ssw0rd1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Proveedor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"jane.smith@example.com\",\n    \"password\": \"P4ssw0rd2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Proveedor Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"sarah.johnson@example.com\",\n    \"password\": \"P4ssw0rd4\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"oliver.martin@example.com\",\n    \"password\": \"P4ssw0rd19\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unidad Reguladora",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5010/svc_regunit/authorization?email=michael.brown@example.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5010",
+							"path": [
+								"svc_regunit",
+								"authorization"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "michael.brown@example.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Realizar Pago",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"payment_email\": \"jane.smith@example.com\",\n    \"payment_description\": \"event-1\",\n    \"payment_amount\": 100\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5011/custom_payment/payment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5011",
+							"path": [
+								"custom_payment",
+								"payment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verificar Pago",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5011/custom_payment/payment/status?email=jane.smith@example.com&description=event-2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5011",
+							"path": [
+								"custom_payment",
+								"payment",
+								"status"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "jane.smith@example.com"
+								},
+								{
+									"key": "description",
+									"value": "event-2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "svc_admin",
+			"item": [
+				{
+					"name": "Crear Proveedor Directo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGV4YW1wbGUuY29tIiwiaWF0IjoxNjg3MDM1MzY2LCJleHAiOjE2ODcwMzg5NjZ9.LqbVGpjKlhFqCIo_bvwHz78n0ulKVrGN_xgf_s9glj2F8MdVLvi9VZOJB4JuIDq6Y-q5X4pFKOds786kTIsg5sq2xRGfA5Cgo084Q_inxo3Q6uui5ZxFTPUb0UHcJ46UD2WqN16d9KPKTH84FLdMSWtWA2eHY8MCc3R9yRZckEuVIszdAwurPspkDK7xLRsHUrvlVQDaEWsVmk80hujG-GxISWDUZ1WMPRW6DYN2XCXxR3N8QTYMwOZ_4LRmTvhAwn9yTvXUGC8sXS35kE6v-NIRRat20te8_AdtagqxoaQTCUcJOBLJtSNTOm5in93rFAF-vYgI8bF2Pp2LgKlmgA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"nombre\",\n    \"country\": \"Uruguay\",\n    \"city\":\"Montevideo\",\n    \"email\": \"jane.smith@example.com\",\n    \"price\": \"300\",\n    \"telephone\": \"\",\n    \"currency\": \"Peso Uruguayo\",\n    \"currencySymbol\": \"$U\",\n    \"currencyCode\": \"UYU\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4001/svc_admin/providers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4001",
+							"path": [
+								"svc_admin",
+								"providers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "svc_bitacora",
+			"item": [
+				{
+					"name": "Get events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:55444/bitacora",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "55444",
+							"path": [
+								"bitacora"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "svc_evento",
+			"item": [
+				{
+					"name": "Eventos no autorizados y que comienzan en las proximas 168hs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4002/svc_evento/unauthorized",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4002",
+							"path": [
+								"svc_evento",
+								"unauthorized"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "svc_log",
+			"item": [
+				{
+					"name": "Obtener Eventos para Proveedor Email",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ids\": [\n        \"1\",\n        \"2\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4012/getEmailStatistics",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4012",
+							"path": [
+								"getEmailStatistics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Eventos para Proveedor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"urls\": [\n        \"http://localhost/svc_file/video/1687047123084-945-video.mp4\",\n        \"http://localhost/svc_evento/compra/1/1\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4012/getURLStatistics",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4012",
+							"path": [
+								"getURLStatistics"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

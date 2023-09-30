@@ -1,0 +1,29 @@
+{
+  "app": "svc_regunit",
+  "environment": "development",
+  "errorFile": "logs/ProviderError.log",
+  "combineFile": "logs/combined.log",
+  "webServer": {
+    "port": 5010,
+    "baseUrl": "/svc_regunit",
+    "routes": {
+      "authorization": {
+        "authorizedProvider": "/authorization"
+      }
+    }
+  },
+  "cors": {
+    "development": {
+      "corsOptions": {
+        "origin": "*",
+        "methods": ["GET"]
+      }
+    },
+    "production": {
+      "corsOptions": {
+        "origin": ["https://example.com", "http://example.com"],
+        "methods": ["GET"]
+      }
+    }
+  }
+}

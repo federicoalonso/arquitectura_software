@@ -1,0 +1,52 @@
+{
+    "routes": [
+        {
+            "description": "Crear un nuevo usuario",
+            "serviceUrl": "http://localhost:4000",
+            "upstream": "/svc_auth/users",
+            "verb": "post",
+            "authNeeded": true,
+            "permissionsNeeded": ["admin"]
+        },
+        {
+            "description": "Obtener un usuario por id",
+            "serviceUrl": "http://localhost:4000",
+            "upstream": "/svc_auth/users/:id",
+            "verb": "get",
+            "authNeeded": true,
+            "permissionsNeeded": ["admin"]
+        },
+        {
+            "description": "Actualizar un usuario",
+            "serviceUrl": "http://localhost:4000",
+            "upstream": "/svc_auth/users/:id",
+            "verb": "put",
+            "authNeeded": true,
+            "permissionsNeeded": ["admin"]
+        },
+        {
+            "description": "Obtener todos los usuarios",
+            "serviceUrl": "http://localhost:4000",
+            "upstream": "/svc_auth/users",
+            "verb": "get",
+            "authNeeded": true,
+            "permissionsNeeded": ["admin"]
+        },        
+        {
+            "description": "Obtener todos los usuarios admin",
+            "serviceUrl": "http://localhost:4000",
+            "upstream": "/svc_auth/users/admins",
+            "verb": "get",
+            "authNeeded": true,
+            "permissionsNeeded": ["admin"]
+        },
+        {
+            "description": "Eliminar un usuario",
+            "serviceUrl": "http://localhost:4000",
+            "upstream": "/svc_auth/users/:id",
+            "verb": "delete",
+            "authNeeded": true,
+            "permissionsNeeded": ["admin"]
+        }
+    ]
+}

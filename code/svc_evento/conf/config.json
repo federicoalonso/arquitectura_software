@@ -1,0 +1,46 @@
+{
+  "app": "svc_evento",
+  "locale": "ES",
+  "domain": "http://localhost",
+  "environment": "development",
+  "dbConnectionString": "mysql://root:secret@localhost:3306/svc_admin",
+  "mongoConnectionString": "mongodb://root:example@localhost:27017/svc_evento?authSource=admin",
+  "regulatoryUnitURL": "http://localhost:5010/svc_regunit/authorization",
+  "customPaymentURL": "http://localhost:5011/custom_payment/payment",
+  "svcAuthURL": "http://localhost:4000/svc_auth/",
+  "svcLogURL": "http://localhost:4012/",
+  "svcBitacoraURL": "http://localhost:55444/",
+  "emailQueue": "emailQueue",
+  "bitacoraQueue": "bitacoraQueue",
+  "emailAddress": "ort.arq.aureauy@gmail.com",
+  "errorFile": "logs/error.log",
+  "combineFile": "logs/combined.log",
+  "pipeline": "direct",
+  "logQueue": "logQueue",
+  "horasAlertaEventoNoAutorizado": 168,
+  "webServer": {
+    "port": 4002,
+    "baseUrl": "/svc_evento",
+    "routes": {
+      "healthCheck": "/healthcheck",
+      "users": {
+        "uploadVideo": "/evento",
+        "viewVideo": "/video/:id"
+      }
+    }
+  },
+  "cors": {
+    "development": {
+      "corsOptions": {
+        "origin": "*",
+        "methods": ["GET", "POST"]
+      }
+    },
+    "production": {
+      "corsOptions": {
+        "origin": ["https://example.com", "http://example.com"],
+        "methods": ["GET", "POST"]
+      }
+    }
+  }
+}

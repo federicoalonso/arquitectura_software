@@ -1,0 +1,9 @@
+{
+  "users": [
+    {
+      "email": "john.doe@example.com",
+      "role_id": 1,
+      "auth_method": "fed_ed"
+    }
+  ]
+}

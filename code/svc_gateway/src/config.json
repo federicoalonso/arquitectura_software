@@ -1,0 +1,32 @@
+{
+  "app": "api-gateway",
+  "port": 5100,
+  "environment": "development",
+  "sessionSecret": "secret",
+  "authUrl": "http://localhost:4000/svc_auth/users/validateToken",
+  "errorFile": "logs/error.log",
+  "combineFile": "logs/combined.log",
+  "logQueue": "logQueue",
+  "limiter": {
+    "max": 100000,
+    "duration": 60000,
+    "message": "Too many requests, please try again later."
+  },
+  "cors": {
+    "development": {
+      "corsOptions": {
+        "origin": "*",
+        "methods": ["GET", "PUT", "POST", "DELETE"]
+      }
+    },
+    "production": {
+      "corsOptions": {
+        "origin": [
+          "https://dashboard.example.com",
+          "https://download.example.com"
+        ],
+        "methods": ["GET", "PUT", "POST", "DELETE"]
+      }
+    }
+  }
+}

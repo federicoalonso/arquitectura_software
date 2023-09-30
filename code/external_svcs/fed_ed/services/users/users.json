@@ -1,0 +1,84 @@
+{
+    "users": [
+        {
+            "email": "john.doe@example.com",
+            "password": "P4ssw0rd1"
+        },
+        {
+            "email": "jane.smith@example.com",
+            "password": "P4ssw0rd2"
+        },
+        {
+            "email": "michael.brown@example.com",
+            "password": "P4ssw0rd3"
+        },
+        {
+            "email": "sarah.johnson@example.com",
+            "password": "P4ssw0rd4"
+        },
+        {
+            "email": "robert.williams@example.com",
+            "password": "P4ssw0rd5"
+        },
+        {
+            "email": "emily.jones@example.com",
+            "password": "P4ssw0rd6"
+        },
+        {
+            "email": "daniel.miller@example.com",
+            "password": "P4ssw0rd7"
+        },
+        {
+            "email": "olivia.davis@example.com",
+            "password": "P4ssw0rd8"
+        },
+        {
+            "email": "william.garcia@example.com",
+            "password": "P4ssw0rd9"
+        },
+        {
+            "email": "ava.smith@example.com",
+            "password": "P4ssw0rd10"
+        },
+        {
+            "email": "james.johnson@example.com",
+            "password": "P4ssw0rd11"
+        },
+        {
+            "email": "isabella.martinez@example.com",
+            "password": "P4ssw0rd12"
+        },
+        {
+            "email": "benjamin.anderson@example.com",
+            "password": "P4ssw0rd13"
+        },
+        {
+            "email": "sophia.wilson@example.com",
+            "password": "P4ssw0rd14"
+        },
+        {
+            "email": "alexander.taylor@example.com",
+            "password": "P4ssw0rd15"
+        },
+        {
+            "email": "mia.thomas@example.com",
+            "password": "P4ssw0rd16"
+        },
+        {
+            "email": "ethan.hernandez@example.com",
+            "password": "P4ssw0rd17"
+        },
+        {
+            "email": "amelia.moore@example.com",
+            "password": "P4ssw0rd18"
+        },
+        {
+            "email": "oliver.martin@example.com",
+            "password": "P4ssw0rd19"
+        },
+        {
+            "email": "ava.jackson@example.com",
+            "password": "P4ssw0rd20"
+        }
+    ]
+}

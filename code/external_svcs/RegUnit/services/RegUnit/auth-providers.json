@@ -1,0 +1,34 @@
+{
+    "authProviders": [
+        {
+            "email": "john.doe@example.com"
+        },
+        {
+            "email": "jane.smith@example.com"
+        },
+        {
+            "email": "michael.brown@example.com"
+        },
+        {
+            "email": "sarah.johnson@example.com"
+        },
+        {
+            "email": "robert.williams@example.com"
+        },
+        {
+            "email": "emily.jones@example.com"
+        },
+        {
+            "email": "daniel.miller@example.com"
+        },
+        {
+            "email": "olivia.davis@example.com"
+        },
+        {
+            "email": "william.garcia@example.com"
+        },
+        {
+            "email": "ava.smith@example.com"
+        }
+    ]
+}

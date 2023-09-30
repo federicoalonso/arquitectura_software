@@ -1,0 +1,48 @@
+const crudMessages = {
+  // notFound: "The user does not exist",
+  alreadyExist: "The provider already exist",
+  //elementDeleted: "User deleted",
+  roleIdIsMissing: "The role is required",
+  authMethodIsMissing: "The authentication method is required",
+  tokenExpired: "The token has expired",
+  tokenValidationError: "The token is not valid",
+  providerIsMissing: "Must provide provider details",
+  invalidEmailFormat: "Invalid email format",
+  invalidNumberFormat: "Invalid number format",
+  nameIsMissing: "Must provide a name",
+  countryIsInvalid: "Invalid country",
+  cityIsInvalid: "Invalid city",
+  currencyIsInvalid: "Invalid currency",
+  currencySymbolIsInvalid: "Invalid currency symbol",
+  currencyCodeIsInvalid: "Invalid currency code",
+  emailIsMissing: "Invalid email",
+  // Niveles de logs
+  levelInfo: "Info",
+  levelError: "Error",
+  // Service Name
+  serviceName: "svc_admin",
+  // Mensajes de logs
+  messageLogPostRequest: "POST request received",
+  messageLogPostResponse: "Respose to POST request",
+  messageInitializingRoutes: "Initializing application routes",
+  messageInitializedRoutes: "Application routes initialized",
+  applicationInitialized: "Application initialized",
+  errorPostRequest: "Error while processing POST request",
+  checkingLogicHealth: "Verifing logic health",
+  logicHealtChecked: "Logic health verified",
+  logicHealthError: "Error while verifing logic health",
+  providerModelInitialized: "Provider data model initialized",
+  initializingModels: "Initializing data models",
+  modelsInitialized: "Data models initialized",
+  modelsToServicesSync: "Data model and data services are synchronized",
+  errorWhileInitializingModels: "Error while initializing data models",
+  saveProviderCall: "saveProvider function has been invoked",
+  providerCreated: "Provider successfully created",
+  createProviderCall: "createProvider function has been invoked",
+  providerValidated: "Provider successfully validated",
+  providerCreationError: "Error while creating provider",
+};
+
+module.exports = {
+  crudMessages,
+};

@@ -1,0 +1,12 @@
+{
+    "routes": [
+        {
+            "description": "Verificar la bitácora de eventos",
+            "serviceUrl": "http://localhost:55444",
+            "upstream": "/bitacora",
+            "verb": "get",
+            "authNeeded": true,
+            "permissionsNeeded": ["admin"]
+        }
+    ]
+}

@@ -1,0 +1,104 @@
+{
+    "routes": [
+        {
+            "description": "Crear un nuevo evento",
+            "serviceUrl": "http://localhost:4002",
+            "upstream": "/svc_evento/evento",
+            "verb": "post",
+            "authNeeded": true,
+            "permissionsNeeded": ["proveedor"]
+        },
+        {
+            "description": "Autorizar o desautorizar un evento",
+            "serviceUrl": "http://localhost:4002",
+            "upstream": "/svc_evento/evento/:id/auth",
+            "verb": "put",
+            "authNeeded": true,
+            "permissionsNeeded": ["admin"]
+        },
+        {
+            "description": "Un proveedor puede actualizar su evento si aún no está autorizado",
+            "serviceUrl": "http://localhost:4002",
+            "upstream": "/svc_evento/evento/:id",
+            "verb": "put",
+            "authNeeded": true,
+            "permissionsNeeded": ["proveedor"]
+        },
+        {
+            "description": "Cualquiera puede ver la lista de eventos disponibles.",
+            "serviceUrl": "http://localhost:4002",
+            "upstream": "/svc_evento/evento",
+            "verb": "get"
+        },
+        {
+            "description": "Cualquiera puede registrarse al servicio como cliente.",
+            "serviceUrl": "http://localhost:4002",
+            "upstream": "/svc_evento/cliente",
+            "verb": "post"
+        },
+        {
+            "description": "Un cliente puede suscribirse a un evento.",
+            "serviceUrl": "http://localhost:4002",
+            "upstream": "/svc_evento/evento/:evento_id/:cliente_id",
+            "verb": "post",
+            "authNeeded": true,
+            "permissionsNeeded": ["user"]
+        },
+        {
+            "description": "Un proveedor puede enviar mensjaes a quienes se suscribieron a un evento.",
+            "serviceUrl": "http://localhost:4002",
+            "upstream": "/svc_evento/mensaje",
+            "verb": "post",
+            "authNeeded": true,
+            "permissionsNeeded": ["proveedor"]
+        },
+        {
+            "description": "Un cliente puede comprar un evento.",
+            "serviceUrl": "http://localhost:4002",
+            "upstream": "/svc_evento/compra/:evento_id/:user_id",
+            "verb": "post",
+            "authNeeded": true,
+            "permissionsNeeded": ["user"]
+        },
+        {
+            "description": "Un cliente puede acceder un evento que compró.",
+            "serviceUrl": "http://localhost:4002",
+            "upstream": "/svc_evento/evento/:uid",
+            "verb": "get",
+            "authNeeded": true,
+            "permissionsNeeded": ["user"]
+        },
+        {
+            "description": "Un proveedor puede ver los datos de sus evnetos.",
+            "serviceUrl": "http://localhost:4002",
+            "upstream": "/svc_evento/evento/:id/proveedor",
+            "verb": "get",
+            "authNeeded": true,
+            "permissionsNeeded": ["proveedor"]
+        },
+        {
+            "description": "Un proveedor puede ver los datos de un evneto.",
+            "serviceUrl": "http://localhost:4002",
+            "upstream": "/svc_evento/evento_provider/:id",
+            "verb": "get",
+            "authNeeded": true,
+            "permissionsNeeded": ["proveedor"]
+        },
+        {
+            "description": "Un administrador puede ver los datos de los eventos autorizados.",
+            "serviceUrl": "http://localhost:4002",
+            "upstream": "/svc_evento/evento_admin",
+            "verb": "get",
+            "authNeeded": true,
+            "permissionsNeeded": ["admin"]
+        },
+        {
+            "description": "Un administrador puede ver los datos de los eventos autorizados.",
+            "serviceUrl": "http://localhost:4002",
+            "upstream": "/svc_evento/evento_admin_bitacora",
+            "verb": "get",
+            "authNeeded": true,
+            "permissionsNeeded": ["admin"]
+        }
+    ]
+}

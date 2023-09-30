@@ -1,0 +1,17 @@
+{
+  "logQueue": "logQueue",
+  "emailQueue": "emailQueue",
+  "redis": {
+    "host": "localhost",
+    "port": 6379
+  },
+  "smtp": {
+    "host": "smtp.gmail.com",
+    "port": 465,
+    "secure": true,
+    "auth": {
+      "user": "ort.arq.aureauy",
+      "pass": "sishdioqbeossaxp"
+    }
+  }
+}
